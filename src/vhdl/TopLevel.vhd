@@ -25,7 +25,7 @@ use work.ipbus_decode_ipbus_example.all;
 entity TopLevel is
   generic(
     data_ram_addr_width: positive := 2;
-    ipbus_ram_addr_width: positive := 1;
+    ipbus_ram_addr_width: positive := 1
     );
   port(
     ipb_clk: in std_logic;
@@ -60,7 +60,7 @@ begin
     clk       => ipb_clk,
     reset     => ipb_rst,
     ipbus_in  => ipbw(N_SLV_REG),
-    ipbus_out => ipbr(N_SLV_REG)
+    ipbus_out => ipbr(N_SLV_REG),
     q         => open
     );
 
